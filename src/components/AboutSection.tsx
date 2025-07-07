@@ -22,13 +22,11 @@ const AboutSection = () => {
             {/* Image */}
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-elegant">
-                <div className="aspect-[4/5] bg-gradient-to-br from-rose-candy to-lavender flex items-center justify-center">
-                  <p className="text-wine text-center px-8">
-                    Foto profissional da Maria Aparecida
-                    <br />
-                    <span className="text-sm opacity-75">(Aguardando imagem)</span>
-                  </p>
-                </div>
+                <img 
+                  src="/lovable-uploads/a4c7d054-ff1f-437b-a4ce-1b4387638130.png"
+                  alt="Maria Aparecida - Confeiteira profissional"
+                  className="w-full h-full object-cover aspect-[4/5]"
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-gold/20 rounded-full blur-xl"></div>
