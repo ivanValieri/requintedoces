@@ -5,12 +5,12 @@ import Autoplay from "embla-carousel-autoplay";
 
 const ImageSlider = () => {
   const images = [
-    "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&h=600&fit=crop&crop=center", // Elegant cake
-    "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=1200&h=600&fit=crop&crop=center", // Pastries
-    "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1200&h=600&fit=crop&crop=center", // Colorful macarons
-    "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1200&h=600&fit=crop&crop=center", // Wedding cake
-    "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=1200&h=600&fit=crop&crop=center", // Cupcakes
-    "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=1200&h=600&fit=crop&crop=center", // Chocolate desserts
+    "/lovable-uploads/a27f51d8-669f-4b01-ac2b-d98ace8fe2b2.png", // Bolos personalizados embalados
+    "/lovable-uploads/c5b24d86-f7e0-4cf7-9c9a-57e166a29360.png", // Cupcake unicórnio com moldura dourada
+    "/lovable-uploads/1bbb056a-38c9-48b5-89ce-9d4a0b768d70.png", // Doces gourmet em potes com laço azul
+    "/lovable-uploads/a844a419-e872-46e3-8a13-110fca5fd776.png", // Bolo recheado com uvas
+    "/lovable-uploads/94c8bca9-44f6-46fd-be60-1893e56ce44d.png", // Bolo de aniversário infantil com personagens
+    "/lovable-uploads/e8e99d0a-8b66-423a-ab7c-eea1f49c7c10.png", // Bolo com decoração em chocolate e dourado
   ];
 
   const [emblaRef] = useEmblaCarousel(
