@@ -18,7 +18,7 @@ const ImageSlider = () => {
       loop: true,
       dragFree: false
     },
-    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+    [Autoplay({ delay: 5000, stopOnInteraction: false })]
   );
 
   return (
@@ -30,7 +30,7 @@ const ImageSlider = () => {
         }}
         plugins={[
           Autoplay({
-            delay: 3000,
+            delay: 5000,
           }),
         ]}
         className="w-full h-full"
