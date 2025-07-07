@@ -2,41 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Design system for Requinte Doces e Salgados */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
+    /* Core brand colors */
+    --wine: 332 85% 18%;           /* #5D001E */
+    --purple-dark: 258 100% 26%;   /* #4B0082 */
+    --lavender: 240 100% 95%;      /* #E6E6FA */
+    --rose-candy: 351 100% 86%;    /* #FFC0CB */
+    --gold: 45 100% 70%;           /* #FFD700 */
+    --gold-light: 45 100% 85%;     /* Lighter gold */
+
+    /* Semantic color system */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 332 85% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 332 85% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 332 85% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 332 85% 18%;        /* Wine */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 258 100% 26%;     /* Purple dark */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 100% 95%;         /* Lavender */
+    --muted-foreground: 258 100% 26%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 351 100% 86%;        /* Rose candy */
+    --accent-foreground: 332 85% 18%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 50% 90%;
+    --input: 240 50% 90%;
+    --ring: 45 100% 70%;           /* Gold */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--wine)), hsl(var(--purple-dark)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--rose-candy)), hsl(var(--lavender)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--wine) / 0.9), hsl(var(--purple-dark) / 0.8));
+    
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--purple-dark) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--gold) / 0.2);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +118,44 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .hero-text {
+    @apply bg-gradient-to-r from-white to-gold-light bg-clip-text text-transparent;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift {
+    @apply transition-smooth hover:translate-y-[-2px] hover:shadow-elegant;
   }
 }

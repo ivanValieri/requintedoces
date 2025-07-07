@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'poppins': ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Brand colors
+				wine: 'hsl(var(--wine))',
+				'purple-dark': 'hsl(var(--purple-dark))',
+				lavender: 'hsl(var(--lavender))',
+				'rose-candy': 'hsl(var(--rose-candy))',
+				gold: 'hsl(var(--gold))',
+				'gold-light': 'hsl(var(--gold-light))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
