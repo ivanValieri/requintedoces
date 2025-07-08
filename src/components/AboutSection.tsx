@@ -84,10 +84,20 @@ const AboutSection = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="default" size="lg" className="flex-1">
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="flex-1"
+                  onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
+                >
                   Fazer Encomenda
                 </Button>
-                <Button variant="outline" size="lg" className="flex-1">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="flex-1"
+                  onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   Ver Portfólio
                 </Button>
               </div>

@@ -7,42 +7,42 @@
 
 @layer base {
   :root {
-    /* Core brand colors */
-    --wine: 332 85% 18%;           /* #5D001E */
-    --purple-dark: 258 100% 26%;   /* #4B0082 */
-    --lavender: 240 100% 95%;      /* #E6E6FA */
-    --rose-candy: 351 100% 86%;    /* #FFC0CB */
-    --gold: 45 100% 70%;           /* #FFD700 */
-    --gold-light: 45 100% 85%;     /* Lighter gold */
+    /* Core brand colors - softer chromatic approach */
+    --wine: 332 50% 35%;           /* Softer wine */
+    --purple-dark: 258 40% 45%;    /* Softer purple */
+    --lavender: 240 30% 97%;       /* Almost white lavender */
+    --rose-candy: 351 40% 92%;     /* Very soft rose */
+    --gold: 45 60% 75%;            /* Softer gold */
+    --gold-light: 45 40% 90%;      /* Very light gold */
 
     /* Semantic color system */
     --background: 0 0% 100%;
-    --foreground: 332 85% 18%;
+    --foreground: 332 50% 35%;
 
     --card: 0 0% 100%;
-    --card-foreground: 332 85% 18%;
+    --card-foreground: 332 50% 35%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 332 85% 18%;
+    --popover-foreground: 332 50% 35%;
 
-    --primary: 332 85% 18%;        /* Wine */
+    --primary: 332 50% 35%;        /* Softer Wine */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 258 100% 26%;     /* Purple dark */
+    --secondary: 258 40% 45%;      /* Softer Purple */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 100% 95%;         /* Lavender */
-    --muted-foreground: 258 100% 26%;
+    --muted: 240 30% 97%;          /* Almost white lavender */
+    --muted-foreground: 258 40% 45%;
 
-    --accent: 351 100% 86%;        /* Rose candy */
-    --accent-foreground: 332 85% 18%;
+    --accent: 351 40% 92%;         /* Very soft rose */
+    --accent-foreground: 332 50% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 50% 90%;
-    --input: 240 50% 90%;
-    --ring: 45 100% 70%;           /* Gold */
+    --border: 240 20% 95%;
+    --input: 240 20% 95%;
+    --ring: 45 60% 75%;            /* Softer Gold */
 
     --radius: 0.75rem;
 

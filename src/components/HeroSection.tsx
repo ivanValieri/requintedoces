@@ -43,10 +43,20 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="text-lg px-8">
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="text-lg px-8"
+              onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
+            >
               Faça sua encomenda personalizada
             </Button>
-            <Button variant="outline" size="xl" className="text-wine border-white/50 bg-white/10 hover:bg-white/20 text-white">
+            <Button 
+              variant="outline" 
+              size="xl" 
+              className="text-wine border-white/50 bg-white/10 hover:bg-white/20 text-white"
+              onClick={() => document.getElementById('cardapio')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Ver Cardápio
             </Button>
           </div>

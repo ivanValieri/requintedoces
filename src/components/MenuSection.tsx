@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Plus, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState("doces");
@@ -14,13 +14,12 @@ const MenuSection = () => {
     { id: "sazonais", name: "Sazonais", icon: "🎉" },
   ];
 
-  const products = {
+const products = {
     doces: [
       {
         id: 1,
         name: "Brigadeiro Gourmet",
         description: "Brigadeiro tradicional com chocolate belga e granulado especial",
-        price: "R$ 3,50",
         image: "placeholder-doce-1",
         badges: ["Sem Glúten"]
       },
@@ -28,7 +27,6 @@ const MenuSection = () => {
         id: 2,
         name: "Beijinho Premium",
         description: "Beijinho com coco fresco e leite condensado artesanal",
-        price: "R$ 3,50",
         image: "placeholder-doce-2",
         badges: ["Vegetariano"]
       },
@@ -36,7 +34,6 @@ const MenuSection = () => {
         id: 3,
         name: "Trufa de Maracujá",
         description: "Trufa cremosa com recheio de maracujá e cobertura de chocolate branco",
-        price: "R$ 4,00",
         image: "placeholder-doce-3",
         badges: ["Sem Lactose"]
       },
@@ -46,7 +43,6 @@ const MenuSection = () => {
         id: 4,
         name: "Coxinha Gourmet",
         description: "Coxinha com recheio de frango desfiado e catupiry artesanal",
-        price: "R$ 6,50",
         image: "placeholder-salgado-1",
         badges: ["Tradicional"]
       },
@@ -54,7 +50,6 @@ const MenuSection = () => {
         id: 5,
         name: "Pastel de Queijo",
         description: "Pastel crocante com queijo derretido e orégano fresco",
-        price: "R$ 5,50",
         image: "placeholder-salgado-2",
         badges: ["Vegetariano"]
       },
@@ -64,7 +59,6 @@ const MenuSection = () => {
         id: 6,
         name: "Brownie Vegano",
         description: "Brownie fudgy com chocolate 70% e nozes caramelizadas",
-        price: "R$ 8,00",
         image: "placeholder-vegano-1",
         badges: ["Vegano", "Sem Lactose"]
       },
@@ -74,7 +68,6 @@ const MenuSection = () => {
         id: 7,
         name: "Panetone Artesanal",
         description: "Panetone tradicional com frutas cristalizadas selecionadas",
-        price: "R$ 45,00",
         image: "placeholder-sazonal-1",
         badges: ["Edição Limitada"]
       },
@@ -147,20 +140,16 @@ const MenuSection = () => {
                     {product.description}
                   </p>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-purple-dark">
-                      {product.price}
-                    </span>
-                    
-                    <div className="flex gap-2">
-                      <Button size="sm" variant="outline" className="p-2">
-                        <Plus className="h-4 w-4" />
-                      </Button>
-                      <Button size="sm" variant="default" className="gap-2">
-                        <ShoppingCart className="h-4 w-4" />
-                        Comprar
-                      </Button>
-                    </div>
+                  <div className="flex items-center justify-center mt-4">
+                    <Button 
+                      size="sm" 
+                      variant="default" 
+                      className="gap-2"
+                      onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      Fazer Encomenda
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -172,7 +161,12 @@ const MenuSection = () => {
             <p className="text-lg text-gray-600 mb-6">
               Não encontrou o que procura? Entre em contato para encomendas personalizadas!
             </p>
-            <Button variant="gold" size="xl" className="gap-2">
+            <Button 
+              variant="gold" 
+              size="xl" 
+              className="gap-2"
+              onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
+            >
               <MessageCircle className="h-5 w-5" />
               Fazer Encomenda Personalizada
             </Button>
