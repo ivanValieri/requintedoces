@@ -10,44 +10,66 @@ const PortfolioSection = () => {
     {
       id: 1,
       type: "image",
-      title: "Casamento Elegante",
-      description: "Mesa de doces completa para 150 convidados",
-      category: "Casamentos",
+      src: "/lovable-uploads/e6957082-263a-45a0-b8cc-504877b06911.png",
+      title: "Cupcakes Artesanais",
+      description: "Cupcakes decorados com detalhes únicos e sabores especiais",
+      category: "Cupcakes",
     },
     {
       id: 2,
-      type: "video",
-      title: "Processo Artesanal",
-      description: "Vídeo mostrando a produção dos brigadeiros gourmet",
-      category: "Processo",
+      type: "image",
+      src: "/lovable-uploads/bedc355d-12e6-47db-993c-bcb42cc1f129.png",
+      title: "Embalagens Personalizadas",
+      description: "Doces embalados com carinho para presentes especiais",
+      category: "Presentes",
     },
     {
       id: 3,
       type: "image",
-      title: "Festa Infantil Temática",
-      description: "Doces personalizados com tema unicórnio",
-      category: "Infantil",
+      src: "/lovable-uploads/6ecfbd87-d7f9-44e5-bd06-d3e3e353d68b.png",
+      title: "Bolo Elegante",
+      description: "Bolo decorado com flores para ocasiões especiais",
+      category: "Bolos",
     },
     {
       id: 4,
       type: "image",
-      title: "Mesa Vegana Completa",
-      description: "Variedade de doces veganos para festa corporativa",
-      category: "Vegano",
+      src: "/lovable-uploads/7a7102c0-5a59-4b8e-b754-cdfcf70b88ca.png",
+      title: "Brigadeiros Gourmet",
+      description: "Brigadeiros com cobertura de castanhas e sabores únicos",
+      category: "Brigadeiros",
     },
     {
       id: 5,
-      type: "video",
-      title: "Depoimento Cliente",
-      description: "Cliente satisfeita com encomenda de aniversário",
-      category: "Depoimentos",
+      type: "image",
+      src: "/lovable-uploads/3eae8f93-37eb-44e8-a01a-f58ccc5a2b9d.png",
+      title: "Apresentação Especial",
+      description: "Doces apresentados de forma elegante em forminhas decorativas",
+      category: "Apresentação",
     },
     {
       id: 6,
       type: "image",
-      title: "Formatura Médica",
-      description: "Salgados sofisticados para formatura",
-      category: "Formaturas",
+      src: "/lovable-uploads/f00c8965-3c55-4961-acf6-9955b8aa0338.png",
+      title: "Bolo Naked Cake",
+      description: "Bolo estilo naked cake com laço rosa e acabamento rústico",
+      category: "Bolos",
+    },
+    {
+      id: 7,
+      type: "image",
+      src: "/lovable-uploads/c70bc6e6-26f1-4d72-bef9-cc06c3fd731d.png",
+      title: "Torta Gourmet",
+      description: "Torta com cobertura especial e castanhas",
+      category: "Tortas",
+    },
+    {
+      id: 8,
+      type: "image",
+      src: "/lovable-uploads/a710b630-5853-411a-88d2-383b735f7611.png",
+      title: "Bolo de Aniversário",
+      description: "Bolo de dois andares decorado com flores naturais",
+      category: "Aniversários",
     },
   ];
 
@@ -84,24 +106,12 @@ const PortfolioSection = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {getVisibleItems().map((item) => (
                 <Card key={item.id} className="group overflow-hidden hover-lift border-wine/20">
-                  <div className="relative aspect-square bg-gradient-to-br from-rose-candy/20 to-lavender/20">
-                    {/* Content placeholder */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      {item.type === "video" ? (
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-wine/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Play className="h-8 w-8 text-wine" />
-                          </div>
-                          <p className="text-wine text-sm">Vídeo</p>
-                        </div>
-                      ) : (
-                        <p className="text-wine text-center text-sm">
-                          Imagem
-                          <br />
-                          {item.title}
-                        </p>
-                      )}
-                    </div>
+                  <div className="relative aspect-square">
+                    <img 
+                      src={item.src} 
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
 
                     {/* Category badge */}
                     <div className="absolute top-4 left-4">

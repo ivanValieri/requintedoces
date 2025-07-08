@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Menu, X, Phone, Mail, MessageCircle, ShoppingCart, User } from "lucide-react";
+import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,19 +76,6 @@ const Header = () => {
               </a>
             </div>
 
-            {/* Cart & User */}
-            <div className="flex items-center space-x-2">
-              <Button variant="ghost" size="icon" className="relative">
-                <ShoppingCart className="h-5 w-5" />
-                <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center bg-wine text-white text-xs">
-                  0
-                </Badge>
-              </Button>
-              <Button variant="outline" size="sm" className="gap-2">
-                <User className="h-4 w-4" />
-                Login
-              </Button>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,18 +100,6 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <div className="flex items-center justify-center space-x-4 mt-4">
-              <Button variant="ghost" size="icon" className="relative">
-                <ShoppingCart className="h-5 w-5" />
-                <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center bg-wine text-white text-xs">
-                  0
-                </Badge>
-              </Button>
-              <Button variant="outline" size="sm" className="gap-2">
-                <User className="h-4 w-4" />
-                Login
-              </Button>
-            </div>
           </nav>
         )}
       </div>
