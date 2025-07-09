@@ -29,7 +29,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-20 bg-gradient-to-b from-white to-lavender/30">
+    <section id="contato" className="py-20 bg-gradient-to-br from-[hsl(var(--gradient-start))] to-[hsl(var(--gradient-end))]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}

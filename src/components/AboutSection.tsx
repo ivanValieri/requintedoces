@@ -4,7 +4,7 @@ import { Heart, Star, Award } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-20 bg-gradient-to-b from-white to-lavender/30">
+    <section id="sobre" className="py-20 bg-gradient-to-br from-[hsl(var(--gradient-start))] to-[hsl(var(--gradient-end))]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -36,15 +36,15 @@ const AboutSection = () => {
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Com mais de <strong className="text-wine">20 anos de experiência</strong>, 
+                <p className="text-lg text-purple-900 leading-relaxed">
+                  Com mais de <strong className="text-purple-800">20 anos de experiência</strong>, 
                   cursos especializados e uma paixão genuína por encantar paladares, 
-                  <strong className="text-purple-dark"> Maria Aparecida</strong> transforma 
+                  <strong className="text-purple-700"> Maria Aparecida</strong> transforma 
                   ingredientes simples em momentos inesquecíveis.
                 </p>
                 
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Nossa missão é proporcionar <strong className="text-wine">sabor com requinte 
+                <p className="text-lg text-purple-900 leading-relaxed">
+                  Nossa missão é proporcionar <strong className="text-purple-800">sabor com requinte 
                   para todos</strong>, respeitando todas as restrições alimentares sem abrir 
                   mão do prazer de uma mesa bem servida.
                 </p>
@@ -55,19 +55,19 @@ const AboutSection = () => {
                 <Card className="p-6 text-center hover-lift border-wine/20">
                   <Heart className="h-8 w-8 text-wine mx-auto mb-3" />
                   <h3 className="font-semibold text-wine mb-2">Paixão</h3>
-                  <p className="text-sm text-gray-600">Por cada receita criada</p>
+                  <p className="text-sm text-purple-800">Por cada receita criada</p>
                 </Card>
                 
                 <Card className="p-6 text-center hover-lift border-wine/20">
                   <Star className="h-8 w-8 text-gold mx-auto mb-3" />
                   <h3 className="font-semibold text-wine mb-2">Qualidade</h3>
-                  <p className="text-sm text-gray-600">Ingredientes selecionados</p>
+                  <p className="text-sm text-purple-800">Ingredientes selecionados</p>
                 </Card>
                 
                 <Card className="p-6 text-center hover-lift border-wine/20">
                   <Award className="h-8 w-8 text-purple-dark mx-auto mb-3" />
                   <h3 className="font-semibold text-wine mb-2">Experiência</h3>
-                  <p className="text-sm text-gray-600">20+ anos de tradição</p>
+                  <p className="text-sm text-purple-800">20+ anos de tradição</p>
                 </Card>
               </div>
 
@@ -76,7 +76,7 @@ const AboutSection = () => {
                 <h3 className="text-xl font-playfair font-bold text-wine mb-3">
                   Nossa Missão
                 </h3>
-                <p className="text-gray-700 italic">
+                <p className="text-purple-900 italic">
                   "Criar experiências gastronômicas únicas que celebram a diversidade 
                   alimentar, onde cada pessoa pode desfrutar de sabores extraordinários, 
                   independentemente de suas restrições ou preferências."

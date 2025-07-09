@@ -77,7 +77,7 @@ const products = {
   const currentProducts = products[activeCategory as keyof typeof products] || [];
 
   return (
-    <section id="cardapio" className="py-20 bg-white">
+    <section id="cardapio" className="py-20 bg-gradient-to-br from-[hsl(var(--gradient-start))] to-[hsl(var(--gradient-end))]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -136,7 +136,7 @@ const products = {
                     {product.name}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                  <p className="text-purple-800 mb-4 text-sm leading-relaxed">
                     {product.description}
                   </p>
 
@@ -158,7 +158,7 @@ const products = {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-purple-800 mb-6">
               Não encontrou o que procura? Entre em contato para encomendas personalizadas!
             </p>
             <Button 

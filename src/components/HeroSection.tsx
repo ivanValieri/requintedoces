@@ -15,28 +15,28 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6">
-            <span className="hero-text">Sabor com</span>
+            <span className="text-purple-900">Sabor com</span>
             <br />
-            <span className="text-gold text-6xl md:text-8xl">Requinte</span>
+            <span className="text-purple-800 text-6xl md:text-8xl">Requinte</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-purple-700 mb-8 max-w-2xl mx-auto leading-relaxed">
             Transformamos ingredientes especiais em momentos inesquecíveis, 
             respeitando todas as restrições alimentares com o máximo de sabor.
           </p>
 
           {/* Specialties badges */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 transition-colors">
+            <Badge variant="secondary" className="bg-purple-800/20 text-purple-900 border-purple-700/30 hover:bg-purple-800/30 transition-colors">
               Vegano
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 transition-colors">
+            <Badge variant="secondary" className="bg-purple-800/20 text-purple-900 border-purple-700/30 hover:bg-purple-800/30 transition-colors">
               Vegetariano
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 transition-colors">
+            <Badge variant="secondary" className="bg-purple-800/20 text-purple-900 border-purple-700/30 hover:bg-purple-800/30 transition-colors">
               Sem Glúten
             </Badge>
-            <Badge variant="secondary" className="bg-white/20 text-white border-white/30 hover:bg-white/30 transition-colors">
+            <Badge variant="secondary" className="bg-purple-800/20 text-purple-900 border-purple-700/30 hover:bg-purple-800/30 transition-colors">
               Sem Lactose
             </Badge>
           </div>
@@ -54,7 +54,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="xl" 
-              className="text-wine border-white/50 bg-white/10 hover:bg-white/20 text-white"
+              className="text-purple-900 border-purple-700/50 bg-purple-100/70 hover:bg-purple-200/80"
               onClick={() => document.getElementById('cardapio')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Ver Cardápio
@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
 
           {/* Contact info */}
-          <div className="mt-12 text-white/80">
+          <div className="mt-12 text-purple-800">
             <p className="text-lg mb-2">
               Atendimento personalizado com Maria Aparecida
             </p>
@@ -75,8 +75,8 @@ const HeroSection = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-purple-700/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-purple-700/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

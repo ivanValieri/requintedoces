@@ -42,7 +42,7 @@ const ImageSlider = () => {
                 <img
                   src={image}
                   alt={`Confeitaria artesanal ${index + 1}`}
-                  className="w-full h-full object-contain object-center"
+                  className="w-full h-full object-scale-down object-center"
                   style={{ objectPosition: 'center' }}
                   loading={index === 0 ? "eager" : "lazy"}
                 />
