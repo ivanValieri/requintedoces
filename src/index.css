@@ -7,49 +7,51 @@
 
 @layer base {
   :root {
-    /* Core brand colors - softer chromatic approach */
+    /* Core brand colors with gradient system */
     --wine: 332 50% 35%;           /* Softer wine */
     --purple-dark: 258 40% 45%;    /* Softer purple */
     --lavender: 240 30% 97%;       /* Almost white lavender */
     --rose-candy: 351 40% 92%;     /* Very soft rose */
     --gold: 45 60% 75%;            /* Softer gold */
     --gold-light: 45 40% 90%;      /* Very light gold */
+    --gradient-start: 320 65% 68%; /* #DE80D0 */
+    --gradient-end: 320 35% 90%;   /* #E9D5E6 */
 
-    /* Semantic color system */
-    --background: 0 0% 100%;
-    --foreground: 332 50% 35%;
+    /* Semantic color system - gradient based */
+    --background: 320 45% 85%;
+    --foreground: 320 80% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 332 50% 35%;
+    --card: 320 35% 88%;
+    --card-foreground: 320 80% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 332 50% 35%;
+    --popover: 320 35% 88%;
+    --popover-foreground: 320 80% 25%;
 
-    --primary: 332 50% 35%;        /* Softer Wine */
-    --primary-foreground: 0 0% 100%;
+    --primary: 320 55% 75%;
+    --primary-foreground: 320 80% 25%;
 
-    --secondary: 258 40% 45%;      /* Softer Purple */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 320 45% 80%;
+    --secondary-foreground: 320 80% 25%;
 
-    --muted: 240 30% 97%;          /* Almost white lavender */
-    --muted-foreground: 258 40% 45%;
+    --muted: 320 25% 92%;
+    --muted-foreground: 320 60% 35%;
 
-    --accent: 351 40% 92%;         /* Very soft rose */
-    --accent-foreground: 332 50% 35%;
+    --accent: 320 35% 85%;
+    --accent-foreground: 320 80% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 20% 95%;
-    --input: 240 20% 95%;
-    --ring: 45 60% 75%;            /* Softer Gold */
+    --border: 320 25% 85%;
+    --input: 320 25% 85%;
+    --ring: 320 50% 70%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--wine)), hsl(var(--purple-dark)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--rose-candy)), hsl(var(--lavender)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--wine) / 0.9), hsl(var(--purple-dark) / 0.8));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--gradient-start) / 0.9), hsl(var(--gradient-end) / 0.8));
     
     --shadow-elegant: 0 10px 30px -10px hsl(var(--purple-dark) / 0.3);
     --shadow-glow: 0 0 40px hsl(var(--gold) / 0.2);
@@ -118,7 +120,9 @@
   }
 
   body {
-    @apply bg-background text-foreground font-poppins;
+    @apply text-foreground font-poppins;
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6 {
