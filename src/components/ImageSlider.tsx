@@ -11,15 +11,12 @@ const ImageSlider = () => {
   ];
 
   return (
-    <section className="w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+    <section className="w-full h-56 sm:h-64 md:h-80 lg:h-96 pt-20 md:pt-24 overflow-hidden">
       <Carousel
         opts={{
           align: "start",
           loop: true,
         }}
-        plugins={[
-          Autoplay({ delay: 6000 })
-        ]}
         className="w-full h-full"
       >
         <CarouselContent className="-ml-0 h-full">
