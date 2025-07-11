@@ -28,16 +28,16 @@ const ImageSlider = () => {
   }, [emblaApi]);
 
   return (
-    <section className="w-full max-w-full h-56 sm:h-64 md:h-80 lg:h-96 pt-20 md:pt-24 overflow-hidden">
+    <section className="w-full h-56 sm:h-64 md:h-80 lg:h-96 pt-[64px] overflow-hidden">
       <Carousel className="w-full h-full" setApi={setEmblaApi}>
-        <CarouselContent className="flex h-full w-full">
+        <CarouselContent className="flex h-full w-full !ml-0">
           {images.map((image, index) => (
-            <CarouselItem key={index} className="w-full h-full flex-shrink-0">
-              <div className="relative w-full h-full flex items-center justify-center">
+            <CarouselItem key={index} className="w-full h-full flex-shrink-0 !pl-0">
+              <div className="relative w-full h-full flex items-center justify-center rounded-xl shadow-lg overflow-hidden">
                 <img
                   src={image}
                   alt={`Confeitaria artesanal ${index + 1}`}
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center transition-all duration-500"
                   style={{ objectPosition: 'center center' }}
                   loading={index === 0 ? "eager" : "lazy"}
                 />
