@@ -11,7 +11,7 @@ const ImageSlider = () => {
   ];
 
   return (
-    <section className="w-full h-56 sm:h-64 md:h-80 lg:h-96 pt-20 md:pt-24 overflow-hidden">
+    <section className="w-full max-w-full h-56 sm:h-64 md:h-80 lg:h-96 pt-20 md:pt-24 overflow-x-hidden">
       <Carousel
         opts={{
           align: "start",
@@ -19,9 +19,9 @@ const ImageSlider = () => {
         }}
         className="w-full h-full"
       >
-        <CarouselContent className="-ml-0 h-full">
+        <CarouselContent className="flex h-full w-full">
           {images.map((image, index) => (
-            <CarouselItem key={index} className="pl-0 basis-full h-full">
+            <CarouselItem key={index} className="w-full h-full flex-shrink-0">
               <div className="relative w-full h-full flex items-center justify-center">
                 <img
                   src={image}
