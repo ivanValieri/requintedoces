@@ -65,9 +65,6 @@ const Footer = () => {
               <a href="#sobre" className="block text-black/80 hover:text-black transition-colors">
                 Sobre Maria
               </a>
-              <a href="#cardapio" className="block text-black/80 hover:text-black transition-colors">
-                Cardápio
-              </a>
               <a href="#portfolio" className="block text-black/80 hover:text-black transition-colors">
                 Portfólio
               </a>
@@ -115,7 +112,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-black/80 text-sm text-center md:text-left">
-            © 2024 Requinte Doces e Salgados. Todos os direitos reservados.
+            © 2025 Requinte Doces e Salgados. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-2 text-black/80 text-sm">
             <span>Feito com</span>
