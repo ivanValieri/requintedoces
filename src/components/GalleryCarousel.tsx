@@ -10,10 +10,10 @@ const galleryItems = [
   { id: 6, image: "/lovable-uploads/6.png", title: "BRIGADEIROS" },
   { id: 7, image: "/lovable-uploads/7.png", title: "DOCES FINOS" },
   { id: 8, image: "/lovable-uploads/8.png", title: "BOLOS DECORADOS" },
-  { id: 9, image: "/lovable-uploads/9.jpeg", title: "DOCES ESPECIAIS" },
-  { id: 10, image: "/lovable-uploads/10.jpeg", title: "BOLOS FESTIVOS" },
-  { id: 11, image: "/lovable-uploads/11.jpeg", title: "DOCES GOURMET" },
-  { id: 12, image: "/lovable-uploads/12.jpeg", title: "BOLOS ARTESANAIS" },
+  { id: 9, image: "/lovable-uploads/9.png", title: "DOCES ESPECIAIS" },
+  { id: 10, image: "/lovable-uploads/10.png", title: "BOLOS FESTIVOS" },
+  { id: 11, image: "/lovable-uploads/11.png", title: "DOCES GOURMET" },
+  { id: 12, image: "/lovable-uploads/12.png", title: "BOLOS ARTESANAIS" },
 ];
 
 const GalleryCarousel = () => {
@@ -21,11 +21,9 @@ const GalleryCarousel = () => {
 
   useEffect(() => {
     if (!api) return;
-
     const interval = setInterval(() => {
       api.scrollNext();
     }, 5000);
-
     return () => clearInterval(interval);
   }, [api]);
 
