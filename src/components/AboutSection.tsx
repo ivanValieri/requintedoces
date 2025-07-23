@@ -23,7 +23,7 @@ const AboutSection = () => {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl shadow-elegant">
                 <img 
-                  src="/lovable-uploads/a4c7d054-ff1f-437b-a4ce-1b4387638130.png"
+                  src="/lovable-uploads/MARIA.png"
                   alt="Maria Aparecida - Confeiteira profissional"
                   className="w-full h-full object-cover aspect-[4/5]"
                 />

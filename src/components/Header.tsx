@@ -9,7 +9,6 @@ const Header = () => {
   const navItems = [
     { name: "Início", href: "#inicio" },
     { name: "Sobre", href: "#sobre" },
-    { name: "Cardápio", href: "#cardapio" },
     { name: "Portfólio", href: "#portfolio" },
     { name: "Encomendas", href: "#encomendas" },
     { name: "Contato", href: "#contato" },
