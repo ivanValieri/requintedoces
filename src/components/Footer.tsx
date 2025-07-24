@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/25b41acb-ca00-4342-8caa-c91c93773d3b.png" 
+                src="/lovable-uploads/logo.png"
                 alt="Requinte Doces e Salgados" 
                 className="h-12 w-12 rounded-full"
               />

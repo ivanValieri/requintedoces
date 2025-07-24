@@ -4,8 +4,10 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import MenuSection from "@/components/MenuSection";
 import PortfolioSection from "@/components/PortfolioSection";
+import VideoBoloSection from "@/components/VideoBoloSection";
 import EventsSection from "@/components/EventsSection";
 import ContactSection from "@/components/ContactSection";
+import PartnersSection from "@/components/PartnersSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -17,8 +19,10 @@ const Index = () => {
       <AboutSection />
       <MenuSection />
       <PortfolioSection />
+      <VideoBoloSection />
       <EventsSection />
       <ContactSection />
+      <PartnersSection />
       <Footer />
     </div>
   );

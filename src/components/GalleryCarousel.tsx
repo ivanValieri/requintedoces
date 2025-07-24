@@ -28,7 +28,7 @@ const GalleryCarousel = () => {
   }, [api]);
 
   return (
-    <section className="w-full py-8 bg-gradient-to-br from-purple-950 to-purple-900">
+    <section className="w-full py-8 bg-gradient-to-br from-purple-950 to-purple-900 mt-[70px]">
       <div className="container mx-auto px-4">
         <Carousel
           opts={{
@@ -43,7 +43,6 @@ const GalleryCarousel = () => {
             {galleryItems.map((item) => (
               <CarouselItem key={item.id} className="pl-4 basis-1/3 sm:basis-1/2 md:basis-1/3">
                 <div className="flex flex-col items-center space-y-4">
-                  <h3 className="text-xl font-bold text-white tracking-wider">{item.title}</h3>
                   <div className="relative aspect-square w-full overflow-hidden rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <img
                       src={item.image}
