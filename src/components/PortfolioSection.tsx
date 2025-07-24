@@ -7,18 +7,18 @@ const PortfolioSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const portfolioItems = [
-    { id: 1, type: "image", src: "/lovable-uploads/A.jpeg", title: "Portfólio 1", description: "Imagem do portfólio 1", category: "Categoria" },
-    { id: 2, type: "image", src: "/lovable-uploads/B.jpeg", title: "Portfólio 2", description: "Imagem do portfólio 2", category: "Categoria" },
-    { id: 3, type: "image", src: "/lovable-uploads/C.jpeg", title: "Portfólio 3", description: "Imagem do portfólio 3", category: "Categoria" },
-    { id: 4, type: "image", src: "/lovable-uploads/D.jpeg", title: "Portfólio 4", description: "Imagem do portfólio 4", category: "Categoria" },
-    { id: 5, type: "image", src: "/lovable-uploads/E.jpeg", title: "Portfólio 5", description: "Imagem do portfólio 5", category: "Categoria" },
-    { id: 6, type: "image", src: "/lovable-uploads/F.jpeg", title: "Portfólio 6", description: "Imagem do portfólio 6", category: "Categoria" },
-    { id: 7, type: "image", src: "/lovable-uploads/G.jpeg", title: "Portfólio 7", description: "Imagem do portfólio 7", category: "Categoria" },
-    { id: 8, type: "image", src: "/lovable-uploads/H.jpeg", title: "Portfólio 8", description: "Imagem do portfólio 8", category: "Categoria" },
-    { id: 9, type: "image", src: "/lovable-uploads/I.jpeg", title: "Portfólio 9", description: "Imagem do portfólio 9", category: "Categoria" },
-    { id: 10, type: "image", src: "/lovable-uploads/J.jpeg", title: "Portfólio 10", description: "Imagem do portfólio 10", category: "Categoria" },
-    { id: 11, type: "image", src: "/lovable-uploads/K.jpeg", title: "Portfólio 11", description: "Imagem do portfólio 11", category: "Categoria" },
-    { id: 12, type: "image", src: "/lovable-uploads/L.jpeg", title: "Portfólio 12", description: "Imagem do portfólio 12", category: "Categoria" },
+    { id: 1, type: "image", src: "/lovable-uploads/A.jpeg", title: "BOLO BOX", description: "Quer presentear alguém?", category: "Categoria" },
+    { id: 2, type: "image", src: "/lovable-uploads/B.jpeg", title: "Mini Bolo de tangerina", description: "espatulado com chantilly e a cobertura com Coulis    de tangerina", category: "Categoria" },
+    { id: 3, type: "image", src: "/lovable-uploads/C.jpeg", title: "Cupcake vegano", description: "Massa de fuba com banana", category: "Categoria" },
+    { id: 4, type: "image", src: "/lovable-uploads/D.jpeg", title: "Bolo no copo de cilindro", description: "Uma boa opção de lembrancinhas para a sua festa.", category: "Categoria" },
+    { id: 5, type: "image", src: "/lovable-uploads/E.jpeg", title: "Sobremesas", description: "Sobremesa gelada sabor maracuja", category: "Categoria" },
+    { id: 6, type: "image", src: "/lovable-uploads/F.jpeg", title: "BOLO VEGANO", description: "Bolo vegano com cobertura buttercream", category: "Categoria" },
+    { id: 7, type: "image", src: "/lovable-uploads/G.jpeg", title: "Sobremesas", description: "Sobremesas geladas de panacota sabor morango", category: "Categoria" },
+    { id: 8, type: "image", src: "/lovable-uploads/H.jpeg", title: "BOLO", description: "Bolo Vegano de Limão", category: "Categoria" },
+    { id: 9, type: "image", src: "/lovable-uploads/I.jpeg", title: "BEM CASADO", description: "Bem casados vegano baunilha com doce de leite", category: "Categoria" },
+    { id: 10, type: "image", src: "/lovable-uploads/J.jpeg", title: "BISCOITO", description: "Biscoito amanteigado salgado", category: "Categoria" },
+    { id: 11, type: "image", src: "/lovable-uploads/K.jpeg", title: "BRIGADEIRO", description: "Brigadeiros vegano", category: "Categoria" },
+    { id: 12, type: "image", src: "/lovable-uploads/L.jpeg", title: "PÃO DE MEL", description: "Pão de mel com recheio de beijinho", category: "Categoria" },
   ];
 
   const nextSlide = () => {

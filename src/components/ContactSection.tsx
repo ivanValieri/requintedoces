@@ -149,23 +149,6 @@ const ContactSection = () => {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Location */}
-              <Card className="border-wine/20">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-orange-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-wine">Localização</h4>
-                      <p className="text-gray-600 text-sm">
-                        Atendimento e entrega na Grande São Paulo
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
 
             {/* Contact Form */}
