@@ -28,7 +28,7 @@ const GalleryCarousel = () => {
   }, [api]);
 
   return (
-    <section className="w-full py-8 bg-gradient-to-br from-purple-950 to-purple-900 mt-[70px]">
+    <section className="w-full py-8 mt-[70px]">
       <div className="container mx-auto px-4">
         <Carousel
           opts={{

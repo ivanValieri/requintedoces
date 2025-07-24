@@ -9,7 +9,7 @@ const EventsSection = () => {
   };
 
   return (
-    <section id="encomendas" className="py-20 bg-gradient-to-b from-white to-rose-candy/20">
+    <section id="encomendas" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Header */}

@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoBoloSection = () => {
   return (
-    <section className="w-full py-12 bg-white flex justify-center">
+    <section className="w-full py-12 flex justify-center">
       <video
         src="/lovable-uploads/videoBolo.mp4"
         controls
