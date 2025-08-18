@@ -23,7 +23,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section id="sobre" className="py-20">
+    <section id="sobre" className="py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -106,7 +106,7 @@ const AboutSection = () => {
                 <Button 
                   variant="default" 
                   size="lg" 
-                  className="flex-1"
+                  className="flex-1 bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90"
                   onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
                 >
                   Fazer Encomenda
