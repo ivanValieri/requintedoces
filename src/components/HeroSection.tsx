@@ -1,7 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById('hero-title');
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+        setIsVisible(isInView);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background decorative elements */}
@@ -14,29 +33,34 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl font-playfair font-extrabold mb-6 drop-shadow-lg">
-            <span className="text-purple-900">Sabor com</span>
-            <br />
-            <span className="text-purple-800 text-6xl md:text-8xl tracking-tight bg-gradient-to-r from-gold via-pink-400 to-purple-800 bg-clip-text text-transparent animate-gradient">Requinte</span>
+          <h1 
+            id="hero-title"
+            className={`text-5xl md:text-7xl font-playfair font-extrabold mb-6 drop-shadow-lg transition-all duration-1000 ease-out ${
+              isVisible 
+                ? 'opacity-100 transform translate-y-0' 
+                : 'opacity-0 transform translate-y-10'
+            }`}
+          >
+            <span className="text-6xl md:text-8xl tracking-tight bg-gradient-to-r from-[#843809] via-[#A0522D] to-[#8B4513] bg-clip-text text-transparent animate-gradient text-glow-animation hover:scale-105 transition-transform duration-500 cursor-pointer">Sabor Inclusivo</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-purple-700 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
+          <p className="text-xl md:text-2xl text-[#843809] mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
             Transformamos ingredientes especiais em momentos inesquecíveis, 
             respeitando todas as restrições alimentares com o máximo de sabor.
           </p>
 
           {/* Specialties badges */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <Badge variant="secondary" className="bg-gradient-to-r from-purple-400/30 to-purple-800/30 text-purple-900 border-purple-700/30 shadow-md px-4 py-2 text-base">
+            <Badge variant="secondary" className="bg-[#97DFAD] text-[#843809] border-[#843809]/30 shadow-md px-4 py-2 text-base">
               Vegano
             </Badge>
-            <Badge variant="secondary" className="bg-gradient-to-r from-purple-400/30 to-purple-800/30 text-purple-900 border-purple-700/30 shadow-md px-4 py-2 text-base">
+            <Badge variant="secondary" className="bg-[#97DFAD] text-[#843809] border-[#843809]/30 shadow-md px-4 py-2 text-base">
               Vegetariano
             </Badge>
-            <Badge variant="secondary" className="bg-gradient-to-r from-purple-400/30 to-purple-800/30 text-purple-900 border-purple-700/30 shadow-md px-4 py-2 text-base">
+            <Badge variant="secondary" className="bg-[#97DFAD] text-[#843809] border-[#843809]/30 shadow-md px-4 py-2 text-base">
               Sem Glúten
             </Badge>
-            <Badge variant="secondary" className="bg-gradient-to-r from-purple-400/30 to-purple-800/30 text-purple-900 border-purple-700/30 shadow-md px-4 py-2 text-base">
+            <Badge variant="secondary" className="bg-[#97DFAD] text-[#843809] border-[#843809]/30 shadow-md px-4 py-2 text-base">
               Sem Lactose
             </Badge>
           </div>
@@ -46,7 +70,7 @@ const HeroSection = () => {
             <Button 
               variant="hero" 
               size="xl" 
-              className="text-lg px-10 py-5 bg-gradient-to-r from-pink-400 via-gold to-purple-700 text-white shadow-xl hover:scale-105 transition-transform duration-200"
+              className="text-lg px-10 py-5 bg-gradient-to-r from-[#843809] via-[#A0522D] to-[#8B4513] text-white shadow-xl hover:scale-105 transition-transform duration-200"
               onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
             >
               Faça sua encomenda personalizada
@@ -54,11 +78,11 @@ const HeroSection = () => {
           </div>
 
           {/* Contact info */}
-          <div className="mt-12 text-purple-800">
+          <div className="mt-12 text-[#843809]">
             <p className="text-lg mb-2 font-semibold">
               Atendimento personalizado com Maria Aparecida
             </p>
-            <p className="text-sm">
+            <p className="text-sm text-[#843809]">
               WhatsApp: (11) 98836-7990 | Email: mariaaparecidavalieri@gmail.com
             </p>
           </div>

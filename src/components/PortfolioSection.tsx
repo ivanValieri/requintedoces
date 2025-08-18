@@ -1,24 +1,43 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 
 const PortfolioSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById('portfolio-title');
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+        setIsVisible(isInView);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const portfolioItems = [
-    { id: 1, type: "image", src: "/lovable-uploads/A.jpeg", title: "BOLO BOX", description: "Quer presentear alguém?", category: "Categoria" },
-    { id: 2, type: "image", src: "/lovable-uploads/B.jpeg", title: "Mini Bolo de tangerina", description: "espatulado com chantilly e a cobertura com Coulis    de tangerina", category: "Categoria" },
-    { id: 3, type: "image", src: "/lovable-uploads/C.jpeg", title: "Cupcake vegano", description: "Massa de fuba com banana", category: "Categoria" },
-    { id: 4, type: "image", src: "/lovable-uploads/D.jpeg", title: "Bolo no copo de cilindro", description: "Uma boa opção de lembrancinhas para a sua festa.", category: "Categoria" },
-    { id: 5, type: "image", src: "/lovable-uploads/E.jpeg", title: "Sobremesas", description: "Sobremesa gelada sabor maracuja", category: "Categoria" },
-    { id: 6, type: "image", src: "/lovable-uploads/F.jpeg", title: "BOLO VEGANO", description: "Bolo vegano com cobertura buttercream", category: "Categoria" },
-    { id: 7, type: "image", src: "/lovable-uploads/G.jpeg", title: "Sobremesas", description: "Sobremesas geladas de panacota sabor morango", category: "Categoria" },
-    { id: 8, type: "image", src: "/lovable-uploads/H.jpeg", title: "BOLO", description: "Bolo Vegano de Limão", category: "Categoria" },
-    { id: 9, type: "image", src: "/lovable-uploads/I.jpeg", title: "BEM CASADO", description: "Bem casados vegano baunilha com doce de leite", category: "Categoria" },
-    { id: 10, type: "image", src: "/lovable-uploads/J.jpeg", title: "BISCOITO", description: "Biscoito amanteigado salgado", category: "Categoria" },
-    { id: 11, type: "image", src: "/lovable-uploads/K.jpeg", title: "BRIGADEIRO", description: "Brigadeiros vegano", category: "Categoria" },
-    { id: 12, type: "image", src: "/lovable-uploads/L.jpeg", title: "PÃO DE MEL", description: "Pão de mel com recheio de beijinho", category: "Categoria" },
+    { id: 1, type: "image", src: "/lovable-uploads/A.jpeg", title: "Portfólio 1", description: "Imagem do portfólio 1", category: "Categoria" },
+    { id: 2, type: "image", src: "/lovable-uploads/B.jpeg", title: "Portfólio 2", description: "Imagem do portfólio 2", category: "Categoria" },
+    { id: 3, type: "image", src: "/lovable-uploads/C.jpeg", title: "Portfólio 3", description: "Imagem do portfólio 3", category: "Categoria" },
+    { id: 4, type: "image", src: "/lovable-uploads/D.jpeg", title: "Portfólio 4", description: "Imagem do portfólio 4", category: "Categoria" },
+    { id: 5, type: "image", src: "/lovable-uploads/E.jpeg", title: "Portfólio 5", description: "Imagem do portfólio 5", category: "Categoria" },
+    { id: 6, type: "image", src: "/lovable-uploads/F.jpeg", title: "Portfólio 6", description: "Imagem do portfólio 6", category: "Categoria" },
+    { id: 7, type: "image", src: "/lovable-uploads/G.jpeg", title: "Portfólio 7", description: "Imagem do portfólio 7", category: "Categoria" },
+    { id: 8, type: "image", src: "/lovable-uploads/H.jpeg", title: "Portfólio 8", description: "Imagem do portfólio 8", category: "Categoria" },
+    { id: 9, type: "image", src: "/lovable-uploads/I.jpeg", title: "Portfólio 9", description: "Imagem do portfólio 9", category: "Categoria" },
+    { id: 10, type: "image", src: "/lovable-uploads/J.jpeg", title: "Portfólio 10", description: "Imagem do portfólio 10", category: "Categoria" },
+    { id: 11, type: "image", src: "/lovable-uploads/K.jpeg", title: "Portfólio 11", description: "Imagem do portfólio 11", category: "Categoria" },
+    { id: 12, type: "image", src: "/lovable-uploads/L.jpeg", title: "Portfólio 12", description: "Imagem do portfólio 12", category: "Categoria" },
   ];
 
   const nextSlide = () => {
@@ -40,11 +59,20 @@ const PortfolioSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-wine mb-6">
-              Nosso Portfólio
+            <h2 
+              id="portfolio-title"
+              className={`text-4xl md:text-5xl font-playfair font-bold mb-6 transition-all duration-1000 ease-out ${
+                isVisible 
+                  ? 'opacity-100 transform translate-y-0' 
+                  : 'opacity-0 transform translate-y-10'
+              }`}
+            >
+              <span className="bg-gradient-to-r from-[#843809] via-[#A0522D] to-[#8B4513] bg-clip-text text-transparent animate-gradient text-glow-animation hover:scale-105 transition-transform duration-500 cursor-pointer">
+                Nosso Portfólio
+              </span>
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
-            <p className="text-xl text-purple-dark max-w-3xl mx-auto">
+            <p className="text-xl text-[#843809] max-w-3xl mx-auto">
               Momentos especiais que ajudamos a criar com sabor e elegância
             </p>
           </div>
@@ -53,7 +81,7 @@ const PortfolioSection = () => {
           <div className="relative">
             <div className="grid md:grid-cols-3 gap-8">
               {getVisibleItems().map((item) => (
-                <Card key={item.id} className="group overflow-hidden hover-lift border-wine/20">
+                <Card key={item.id} className="group overflow-hidden hover-lift border-wine/20 bg-[#97DFAD]">
                   <div className="relative aspect-square">
                     <img 
                       src={item.src} 
@@ -89,7 +117,7 @@ const PortfolioSection = () => {
               variant="outline"
               size="icon"
               onClick={prevSlide}
-              className="absolute left-[-60px] top-1/2 transform -translate-y-1/2 hidden lg:flex bg-white shadow-elegant"
+              className="absolute left-[-60px] top-1/2 transform -translate-y-1/2 hidden lg:flex bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90 shadow-elegant"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -98,7 +126,7 @@ const PortfolioSection = () => {
               variant="outline"
               size="icon"
               onClick={nextSlide}
-              className="absolute right-[-60px] top-1/2 transform -translate-y-1/2 hidden lg:flex bg-white shadow-elegant"
+              className="absolute right-[-60px] top-1/2 transform -translate-y-1/2 hidden lg:flex bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90 shadow-elegant"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -106,11 +134,11 @@ const PortfolioSection = () => {
 
           {/* Mobile navigation */}
           <div className="flex justify-center gap-4 mt-8 lg:hidden">
-            <Button variant="outline" onClick={prevSlide}>
+            <Button variant="outline" onClick={prevSlide} className="bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90">
               <ChevronLeft className="h-4 w-4 mr-2" />
               Anterior
             </Button>
-            <Button variant="outline" onClick={nextSlide}>
+            <Button variant="outline" onClick={nextSlide} className="bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90">
               Próximo
               <ChevronRight className="h-4 w-4 ml-2" />
             </Button>
@@ -123,7 +151,7 @@ const PortfolioSection = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-2 h-2 rounded-full transition-colors ${
-                  currentSlide === index ? "bg-wine" : "bg-wine/30"
+                  currentSlide === index ? "bg-[#843809]" : "bg-[#843809]/30"
                 }`}
               />
             ))}
@@ -131,10 +159,10 @@ const PortfolioSection = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-[#843809] mb-6">
               Quer ver seu evento aqui? Vamos criar algo único juntos!
             </p>
-            <Button variant="accent" size="lg">
+            <Button size="lg" className="bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90 px-8 py-3 rounded-lg font-medium">
               Solicitar Orçamento
             </Button>
           </div>

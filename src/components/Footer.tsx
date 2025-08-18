@@ -13,17 +13,17 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/logo.png"
+                src="/lovable-uploads/Logo%20Sabor%20Inclusivo.png"
                 alt="Requinte Doces e Salgados" 
                 className="h-12 w-12 rounded-full"
               />
               <div>
-                <h3 className="text-2xl font-playfair font-bold">Requinte</h3>
-                <p className="text-black/80">Doces e Salgados</p>
+                <h3 className="text-2xl font-playfair font-bold text-[#843809]">Requinte</h3>
+                <p className="text-[#843809]/80">Doces e Salgados</p>
               </div>
             </div>
             
-            <p className="text-black/90 mb-6 max-w-md">
+            <p className="text-[#843809]/90 mb-6 max-w-md">
               Transformando momentos especiais em experiências inesquecíveis 
               através de sabores únicos e atendimento personalizado.
             </p>
@@ -31,14 +31,14 @@ const Footer = () => {
             <div className="space-y-3">
               <a 
                 href="tel:+5511988367990" 
-                className="flex items-center gap-3 text-black/90 hover:text-black transition-colors"
+                className="flex items-center gap-3 text-[#843809]/90 hover:text-[#843809] transition-colors"
               >
                 <Phone className="h-4 w-4" />
                 (11) 98836-7990
               </a>
               <a 
                 href="mailto:mariaaparecidavalieri@gmail.com" 
-                className="flex items-center gap-3 text-black/90 hover:text-black transition-colors"
+                className="flex items-center gap-3 text-[#843809]/90 hover:text-[#843809] transition-colors"
               >
                 <Mail className="h-4 w-4" />
                 mariaaparecidavalieri@gmail.com
@@ -47,7 +47,7 @@ const Footer = () => {
                 href="https://wa.me/5511988367990" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-black/90 hover:text-black transition-colors"
+                className="flex items-center gap-3 text-[#843809]/90 hover:text-[#843809] transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp: Chat direto
@@ -57,18 +57,18 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-playfair font-bold mb-6">Menu Rápido</h4>
+            <h4 className="text-lg font-playfair font-bold mb-6 text-[#843809]">Menu Rápido</h4>
             <nav className="space-y-3">
-              <a href="#inicio" className="block text-black/80 hover:text-black transition-colors">
+              <a href="#inicio" className="block text-[#843809]/80 hover:text-[#843809] transition-colors">
                 Início
               </a>
-              <a href="#sobre" className="block text-black/80 hover:text-black transition-colors">
+              <a href="#sobre" className="block text-[#843809]/80 hover:text-[#843809] transition-colors">
                 Sobre Maria
               </a>
-              <a href="#portfolio" className="block text-black/80 hover:text-black transition-colors">
+              <a href="#portfolio" className="block text-[#843809]/80 hover:text-[#843809] transition-colors">
                 Portfólio
               </a>
-              <a href="#contato" className="block text-black/80 hover:text-black transition-colors">
+              <a href="#contato" className="block text-[#843809]/80 hover:text-[#843809] transition-colors">
                 Contato
               </a>
             </nav>
@@ -76,52 +76,52 @@ const Footer = () => {
 
           {/* Redes Sociais Centralizadas no rodapé */}
           <div className="w-full flex flex-col items-center justify-center mt-8 mb-2">
-            <h4 className="text-lg font-playfair font-bold mb-4 text-center">Siga-nos nas redes</h4>
+            <h4 className="text-lg font-playfair font-bold mb-4 text-center text-[#843809]">Siga-nos nas redes</h4>
             <div className="flex gap-5 justify-center mb-2">
               <a 
                 href="https://instagram.com/requinte_docesesalgados" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-black/10 rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
+                className="w-10 h-10 bg-[#843809]/10 rounded-full flex items-center justify-center hover:bg-[#843809]/20 transition-colors"
               >
-                <Instagram className="h-5 w-5 text-black" />
+                <Instagram className="h-5 w-5 text-[#843809]" />
               </a>
               <a 
                 href="https://wa.me/5511988367990" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-black/10 rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
+                className="w-10 h-10 bg-[#843809]/10 rounded-full flex items-center justify-center hover:bg-[#843809]/20 transition-colors"
               >
-                <MessageCircle className="h-5 w-5 text-black" />
+                <MessageCircle className="h-5 w-5 text-[#843809]" />
               </a>
               <a
                 href="https://www.facebook.com/requintedocesesalgados2016/?ref=_xav_ig_profile_page_web#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-black/10 rounded-full flex items-center justify-center hover:bg-black/20 transition-colors"
+                className="w-10 h-10 bg-[#843809]/10 rounded-full flex items-center justify-center hover:bg-[#843809]/20 transition-colors"
               >
-                <Facebook className="h-5 w-5 text-black" />
+                <Facebook className="h-5 w-5 text-[#843809]" />
               </a>
             </div>
-            <span className="text-black/80 text-sm">@requinte_docesesalgados</span>
+            <span className="text-[#843809]/80 text-sm">@requinte_docesesalgados</span>
           </div>
         </div>
 
         <Separator className="border-black/20" />
 
         {/* Bottom Footer */}
-        <div className="py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-black/80 text-sm text-center md:text-left">
+        <div className="flex flex-col md:flex-row justify-between items-center py-8">
+          <div className="text-[#843809]/80 text-sm text-center md:text-left">
             © 2025 Requinte Doces e Salgados. Todos os direitos reservados.
           </div>
-          <div className="flex items-center gap-2 text-black/80 text-sm">
+          <div className="flex items-center gap-2 text-[#843809]/80 text-sm">
             <span>Feito com</span>
             <Heart className="h-4 w-4 text-red-400" />
             <a
               href="https://www.instagram.com/mikal_designs/?hl=pt"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-purple-700 transition-colors"
+              className="underline hover:text-[#843809] transition-colors"
             >
               por Mikal Designs
             </a>

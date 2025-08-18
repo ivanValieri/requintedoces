@@ -15,21 +15,20 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-elegant">
+    <header className="fixed top-0 w-full z-50 bg-[#97DFAD] backdrop-blur-md shadow-elegant">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/logo.png"
+              src="/lovable-uploads/Logo%20Sabor%20Inclusivo.png"
               alt="Requinte Doces e Salgados" 
-              className="h-12 w-12 rounded-full"
+              className="h-16 w-16 rounded-full"
             />
             <div>
-              <h1 className="text-xl font-playfair font-bold text-wine">
-                Requinte
+              <h1 className="text-xl font-playfair font-bold text-[#843809]">
+                Sabor Inclusivo
               </h1>
-              <p className="text-sm text-purple-dark">Doces e Salgados</p>
             </div>
           </div>
 
@@ -39,7 +38,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-wine hover:text-purple-dark transition-colors font-medium"
+                className="text-[#843809] hover:text-[#843809]/80 transition-colors font-medium"
               >
                 {item.name}
               </a>
@@ -52,14 +51,14 @@ const Header = () => {
             <div className="flex items-center space-x-2">
               <a
                 href="tel:+5511988367990"
-                className="p-2 text-wine hover:text-purple-dark transition-colors"
+                className="p-2 text-[#843809] hover:text-[#843809]/80 transition-colors"
                 title="WhatsApp: +55 11 98836-7990"
               >
                 <Phone className="h-5 w-5" />
               </a>
               <a
                 href="mailto:mariaaparecidavalieri@gmail.com"
-                className="p-2 text-wine hover:text-purple-dark transition-colors"
+                className="p-2 text-[#843809] hover:text-[#843809]/80 transition-colors"
                 title="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -68,7 +67,7 @@ const Header = () => {
                 href="https://wa.me/5511988367990"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-wine hover:text-purple-dark transition-colors"
+                className="p-2 text-[#843809] hover:text-[#843809]/80 transition-colors"
                 title="Chat WhatsApp"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -80,7 +79,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-wine"
+            className="lg:hidden p-2 text-[#843809]"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -94,7 +93,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-wine hover:text-purple-dark transition-colors font-medium"
+                className="block py-2 text-[#843809] hover:text-[#843809]/80 transition-colors font-medium"
               >
                 {item.name}
               </a>
