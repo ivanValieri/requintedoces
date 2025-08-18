@@ -1,6 +1,25 @@
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const EventsSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById('events-title');
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+        setIsVisible(isInView);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleWhatsAppClick = () => {
     const phone = "5511988367990";
     const message = "Olá! Gostaria de solicitar um orçamento para meu evento.";
@@ -13,8 +32,17 @@ const EventsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Header */}
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-[#843809] mb-6">
-            Festas e Confraternizações
+          <h2 
+            id="events-title"
+            className={`text-4xl md:text-5xl font-playfair font-bold mb-6 transition-all duration-1000 ease-out ${
+              isVisible 
+                ? 'opacity-100 transform translate-y-0' 
+                : 'opacity-0 transform translate-y-10'
+            }`}
+          >
+            <span className="bg-gradient-to-r from-[#843809] via-[#A0522D] to-[#8B4513] bg-clip-text text-transparent animate-gradient text-glow-animation hover:scale-105 transition-transform duration-500 cursor-pointer">
+              Festas e Confraternizações
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           
