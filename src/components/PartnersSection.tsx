@@ -17,7 +17,7 @@ const partners = [
 
 const PartnersSection = () => {
   return (
-    <section className="w-full py-12 border-t border-purple-300">
+    <section className="w-full py-12 bg-[#97DFAD] border-t border-[#843809]/30">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-[#843809] mb-8 font-playfair">Parceiros</h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">

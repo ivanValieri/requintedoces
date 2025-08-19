@@ -5,7 +5,7 @@ import { Phone, Mail, MessageCircle, Instagram, Heart, Facebook } from "lucide-r
 
 const Footer = () => {
   return (
-    <footer className="gradient-primary text-black">
+    <footer className="bg-[#97DFAD] text-black">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-16">
@@ -18,8 +18,8 @@ const Footer = () => {
                 className="h-12 w-12 rounded-full"
               />
               <div>
-                <h3 className="text-2xl font-playfair font-bold text-[#843809]">Requinte</h3>
-                <p className="text-[#843809]/80">Doces e Salgados</p>
+                <h3 className="text-2xl font-playfair font-bold text-[#843809]">Sabor</h3>
+                <p className="text-[#843809]/80">Inclusivo</p>
               </div>
             </div>
             

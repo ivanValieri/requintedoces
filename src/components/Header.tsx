@@ -1,10 +1,22 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Menu, X, Phone, Mail, MessageCircle } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: "Início", href: "#inicio" },
@@ -15,7 +27,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-[#97DFAD] backdrop-blur-md shadow-elegant">
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md shadow-elegant ${
+      isScrolled 
+        ? 'bg-[#97DFAD]/80' 
+        : 'bg-[#97DFAD]'
+    }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}

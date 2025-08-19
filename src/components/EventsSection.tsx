@@ -65,7 +65,7 @@ const EventsSection = () => {
             onClick={handleWhatsAppClick}
             variant="gold" 
             size="xl" 
-            className="text-lg px-12 py-4"
+            className="text-lg px-12 py-4 bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90 animate-pulse hover:animate-none"
           >
             Solicite seu Orçamento
           </Button>

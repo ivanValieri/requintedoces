@@ -64,7 +64,7 @@ const AboutSection = () => {
             {/* Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <p className="text-lg text-[#843809] leading-relaxed">
+                <p className="text-lg text-[#843809] leading-relaxed text-justify">
                   Um pouco sobre minha história e meu percurso profissional. Sou graduada em pedagogia e pós graduação em psicopedagogia. Mesmo Atuando na área tinha um sonho em abraçar a área da confeitaria. Deixei a área da educação e entrei de cabeça nos cursos profissionalizantes de confeitaria, onde me formei como designer cake, confeitaria tradicional e inclusiva, cursos de panificação, doces e salgados, vegetarianos, veganos e inclusivos. Atendo atualmente festas, curso de férias, eventos sociais e corporativos com opções de brindes ou lembrancinhas personalizadas.
                 </p>
               </div>
@@ -106,7 +106,7 @@ const AboutSection = () => {
                 <Button 
                   variant="default" 
                   size="lg" 
-                  className="flex-1 bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90"
+                  className="flex-1 bg-[#97DFAD] text-[#843809] border-[#843809] hover:bg-[#97DFAD]/90 animate-pulse hover:animate-none"
                   onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
                 >
                   Fazer Encomenda

@@ -70,7 +70,7 @@ const HeroSection = () => {
             <Button 
               variant="hero" 
               size="xl" 
-              className="text-lg px-10 py-5 bg-gradient-to-r from-[#843809] via-[#A0522D] to-[#8B4513] text-white shadow-xl hover:scale-105 transition-transform duration-200"
+              className="text-lg px-10 py-5 bg-gradient-to-r from-[#843809] via-[#A0522D] to-[#8B4513] text-white shadow-xl hover:scale-105 transition-transform duration-200 animate-slow-pulse hover:animate-none"
               onClick={() => window.open('https://wa.me/5511988367990?text=Olá! Gostaria de fazer uma encomenda personalizada.', '_blank')}
             >
               Faça sua encomenda personalizada
