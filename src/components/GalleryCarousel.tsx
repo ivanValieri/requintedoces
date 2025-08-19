@@ -21,14 +21,41 @@ const GalleryCarousel = () => {
 
   useEffect(() => {
     if (!api) return;
+
+    // Autoplay seguro
     const interval = setInterval(() => {
-      api.scrollNext();
+      try {
+        if (!api) return;
+        api.scrollNext();
+      } catch {}
     }, 5000);
-    return () => clearInterval(interval);
+
+    // Recalcular quando a janela for redimensionada ou voltar ao foco
+    const handleResize = () => {
+      try {
+        api?.reInit();
+      } catch {}
+    };
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible") {
+        try {
+          api?.reInit();
+        } catch {}
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
   }, [api]);
 
   return (
-    <section className="w-full py-8 mt-[70px] overflow-hidden">
+    <section className="w-full py-8 mt-[70px]">
       <div className="container mx-auto px-4">
         <Carousel
           opts={{
@@ -37,13 +64,13 @@ const GalleryCarousel = () => {
             slidesToScroll: 3,
           }}
           setApi={setApi}
-          className="w-full overflow-hidden"
+          className="w-full"
         >
-          <CarouselContent className="-ml-4 overflow-hidden">
+          <CarouselContent className="-ml-4">
             {galleryItems.map((item) => (
-              <CarouselItem key={item.id} className="pl-4 basis-1/3 sm:basis-1/2 md:basis-1/3 overflow-hidden">
+              <CarouselItem key={item.id} className="pl-4 basis-1/3 sm:basis-1/2 md:basis-1/3">
                 <div className="flex flex-col items-center space-y-4">
-                  <div className="relative aspect-square w-full overflow-hidden rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl max-w-full">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -55,8 +82,8 @@ const GalleryCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 bg-white/20 hover:bg-white/30 overflow-hidden" />
-          <CarouselNext className="hidden md:flex -right-12 bg-white/20 hover:bg-white/30 overflow-hidden" />
+          <CarouselPrevious className="hidden md:flex -left-12 bg-white/20 hover:bg-white/30" />
+          <CarouselNext className="hidden md:flex -right-12 bg-white/20 hover:bg-white/30" />
         </Carousel>
       </div>
     </section>

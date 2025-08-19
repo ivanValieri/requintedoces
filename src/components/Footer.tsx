@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-6">
               <img 
                 src="/lovable-uploads/Logo%20Sabor%20Inclusivo.png"
-                alt="Requinte Doces e Salgados" 
+                alt="Sabor Inclusivo" 
                 className="h-12 w-12 rounded-full"
               />
               <div>
@@ -112,7 +112,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center py-8">
           <div className="text-[#843809]/80 text-sm text-center md:text-left">
-            © 2025 Requinte Doces e Salgados. Todos os direitos reservados.
+            © 2025 Sabor Inclusivo. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-2 text-[#843809]/80 text-sm">
             <span>Feito com</span>
