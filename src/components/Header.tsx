@@ -27,12 +27,12 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md shadow-elegant ${
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md shadow-elegant overflow-hidden ${
       isScrolled 
         ? 'bg-[#97DFAD]/80' 
         : 'bg-[#97DFAD]'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 overflow-hidden">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">

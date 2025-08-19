@@ -5,6 +5,46 @@
 /* Design system for Requinte Doces e Salgados */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
 
+/* Fix for horizontal overflow on mobile devices */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Additional overflow fixes */
+.container {
+  overflow-x: hidden;
+}
+
+/* Fix for carousel overflow */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  overflow: hidden;
+}
+
+.embla__slide {
+  overflow: hidden;
+}
+
+/* Ensure all sections don't overflow */
+section {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Fix for any potential horizontal scroll */
+.w-full {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 @layer base {
   :root {
     /* Core brand colors with gradient system */

@@ -28,7 +28,7 @@ const GalleryCarousel = () => {
   }, [api]);
 
   return (
-    <section className="w-full py-8 mt-[70px]">
+    <section className="w-full py-8 mt-[70px] overflow-hidden">
       <div className="container mx-auto px-4">
         <Carousel
           opts={{
@@ -37,13 +37,13 @@ const GalleryCarousel = () => {
             slidesToScroll: 3,
           }}
           setApi={setApi}
-          className="w-full"
+          className="w-full overflow-hidden"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-4 overflow-hidden">
             {galleryItems.map((item) => (
-              <CarouselItem key={item.id} className="pl-4 basis-1/3 sm:basis-1/2 md:basis-1/3">
+              <CarouselItem key={item.id} className="pl-4 basis-1/3 sm:basis-1/2 md:basis-1/3 overflow-hidden">
                 <div className="flex flex-col items-center space-y-4">
-                  <div className="relative aspect-square w-full overflow-hidden rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl max-w-full">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -55,8 +55,8 @@ const GalleryCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-12 bg-white/20 hover:bg-white/30" />
-          <CarouselNext className="hidden md:flex -right-12 bg-white/20 hover:bg-white/30" />
+          <CarouselPrevious className="hidden md:flex -left-12 bg-white/20 hover:bg-white/30 overflow-hidden" />
+          <CarouselNext className="hidden md:flex -right-12 bg-white/20 hover:bg-white/30 overflow-hidden" />
         </Carousel>
       </div>
     </section>
