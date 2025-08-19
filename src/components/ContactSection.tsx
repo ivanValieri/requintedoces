@@ -88,7 +88,7 @@ const ContactSection = () => {
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-[#843809]">WhatsApp</h4>
-                          <p className="text-gray-600">(11) 98836-7990</p>
+                          <p className="text-[#843809]">(11) 98836-7990</p>
                           <Badge className="mt-2 bg-green-100 text-green-700">
                             Resposta rápida
                           </Badge>
@@ -114,7 +114,7 @@ const ContactSection = () => {
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-[#843809]">Telefone</h4>
-                          <p className="text-gray-600">(11) 98836-7990</p>
+                          <p className="text-[#843809]">(11) 98836-7990</p>
                         </div>
                         <Button
                           variant="outline"
@@ -137,7 +137,7 @@ const ContactSection = () => {
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-[#843809]">Email</h4>
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-[#843809] text-sm">
                             mariaaparecidavalieri@gmail.com
                           </p>
                         </div>
@@ -164,7 +164,7 @@ const ContactSection = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-2 text-sm">
+                  <div className="space-y-2 text-sm text-[#843809]">
                     <div className="flex justify-between">
                       <span>Segunda a Sexta:</span>
                       <span className="font-medium">8h às 18h</span>
@@ -266,7 +266,7 @@ const ContactSection = () => {
                     Enviar Mensagem
                   </Button>
 
-                  <p className="text-xs text-gray-500 text-center">
+                  <p className="text-xs text-[#843809]/80 text-center">
                     Responderemos em até 24 horas. Para urgências, use o WhatsApp.
                   </p>
                 </form>

@@ -70,7 +70,7 @@ const EventsSection = () => {
             Solicite seu Orçamento
           </Button>
           
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="text-sm text-[#843809] mt-4">
             Resposta em até 24 horas • Orçamento sem compromisso
           </p>
         </div>
