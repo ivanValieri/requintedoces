@@ -114,6 +114,9 @@ const Footer = () => {
           <div className="text-[#843809]/80 text-sm text-center md:text-left">
             © 2025 Sabor Inclusivo. Todos os direitos reservados.
           </div>
+          <div className="text-[#843809]/80 text-sm text-center md:text-left">
+            Sabor Incluso uma linha exclusiva da Requinte doces e colocar o CNPJ 36.059.265/0001-02
+          </div>
           <div className="flex items-center gap-2 text-[#843809]/80 text-sm">
             <span>Feito com</span>
             <Heart className="h-4 w-4 text-red-400" />
